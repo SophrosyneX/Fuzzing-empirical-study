@@ -21,13 +21,13 @@ make clean && make
 ## Compile target program & Extract dictionary
 
 ```bash
-cd ../path-to-repo/demo-program/jhead
+cd ../path-to-repo/Demo/jhead
 export PATH=/usr/lib/llvm-13/bin:$PATH
 export CC=../path-to-repo/CDFuzz/afl-clang-fast
 make clean && make
 
 # Start Fuzzing
-cd ../path-to-repo/demo-program/fuzzing
+cd ../path-to-repo/Demo/fuzzing
 ../path-to-repo/CDFuzz/afl-fuzz -d -i ./jhead-initial-seed -o ./fuzz-out -x ../jhead/jhead_dict -- ../jhead/jhead @@
 ```
 
