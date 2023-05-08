@@ -77,3 +77,6 @@ cd ../path-to-repo/Demo/fuzzing
 | bento4 | Heap-buffer-overflow | 3 | reported | https://github.com/axiomatic-systems/Bento4/issues/745 |
 | bento4 | Segmentation fault | 1 | reported | https://github.com/axiomatic-systems/Bento4/issues/741 |
 | bento4 | Heap-use-after-free | 1 | reported | https://github.com/axiomatic-systems/Bento4/issues/740 |
+
+# Dictionary Tokens Extraction
+The process by which we extract dictionary tokens is shown in the accompanying code: https://github.com/SophrosyneX/Fuzzing-empirical-study/blob/main/CDFuzz/llvm_mode/afl-llvm-dict-analysis.cpp
