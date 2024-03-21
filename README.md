@@ -80,3 +80,30 @@ cd ../path-to-repo/Demo/fuzzing
 
 # Dictionary Tokens Extraction
 The process by which we extract dictionary tokens is shown in the accompanying code: https://github.com/SophrosyneX/Fuzzing-empirical-study/blob/main/CDFuzz/llvm_mode/afl-llvm-dict-analysis.cpp
+
+
+# Performance overhead of CDFuzz vs. AFL
+
+CDFuzz obtaining CFG and all tokens via compilation stage 
+
+compilation time of CDFuzz vs. original AFL afl-clang-fast
+
+| Benchmark | AFL | CDFuzz |
+| --- | --- | --- |
+| binutils | 184.6s | 260.8s |
+| jhead | 1.6s | 2.0s |
+| pngfix | 11.2s | 11.9s |
+| djpeg | 11.2s | 12.0s |
+| xmllint | 26.5s | 27.2s |
+| llibtiff | 19.0s | 24.2s |
+| xmlwf | 4.8s | 7.3s |
+| mutools | 240.1s | 245.6s |
+| re2 | 32.5s | 35.2s |
+| jsoncpp | 18.0s | 19.6s |
+| sqlite3 | 68.9s | 72.0s |
+| bloaty | 338.0s | 371.6s |
+| libxml2 | 26.6s | 29.4s |
+| libjpeg-turbo | 41.0s | 51.6s |
+| libpng | 6.1s | 7.4s |
+| tcpdump | 124.4s | 135.5s |
+| Average | 72.2s | 82.1s |
